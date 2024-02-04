@@ -1,0 +1,23 @@
+databases:
+  - name: rubyshop
+    databaseName: rubyshop
+    user: rubyshop
+    plan: free
+
+services:
+  - type: web
+    name: rubyshop
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rubyshop
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
