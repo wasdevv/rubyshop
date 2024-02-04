@@ -22,7 +22,7 @@ a {
     background-color: #18181B;
 }
 
-nav {
+.nav-portfolio {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
@@ -32,21 +32,20 @@ nav {
     gap: 2rem;
 }
 
-
-.nav-links {
+.nav-portfolio-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 48px;
 }
 
-.link a {
+.link-portfolio a {
     position: relative;
     padding-bottom: 12px;
     color: #fff;
 }
 
-.link a::after {
+.link-portfolio a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -57,7 +56,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.link a:hover::after {
+.link-portfolio a:hover::after {
     width: 70%;
 }
 
@@ -75,7 +74,7 @@ nav {
     background-color: #0ebd91;
 }
 
-.container {
+.container-portfolio {
     max-width: 1200px;
     margin: auto;
     padding: 80px 32px;
@@ -90,14 +89,14 @@ header {
     gap: 32px;
 }
 
-header .content h4 {
+header .content-portfolio h4 {
     margin-bottom: 16px;
     color: #ccc;
     font-size: 16px;
     font-weight: 600;
 }
 
-header .content h1 {
+header .content-portfolio h1 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 48px;
@@ -105,7 +104,7 @@ header .content h1 {
     line-height: 60px;
 }
 
-header .content p {
+header .content-portfolio p {
     margin-bottom: 2rem;
     color: #ccc;
 }
@@ -180,7 +179,7 @@ section .header {
 
 
 @media (width < 900px){
-    .nav-links{
+    .nav-portfolio-links{
         display: none;
     }
     header{

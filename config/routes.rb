@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :pages
+  resources :products do
+    member do
+      delete '/destroy', to: 'products#destroy', as: :destroy
+    end
+  end
+
+  resources :pages do
+    member do
+      get '/index', to: 'pages#index', as: :index
+    end
+  end
   # Defines the root path route ("/")
   root "pages#home"
 end

@@ -7,7 +7,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%# Portfolio %>
     <%= stylesheet_link_tag "portfolio", "data-turbo-track": "reload" %>
+    
+    <%# Index Home %>
+    <%= stylesheet_link_tag "index-project", "data-turbo-track": "reload" %>
 
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
@@ -19,6 +23,9 @@
   </head>
 
   <body>
+    <% unless params[:action] == 'home' %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
