@@ -1,2 +1,23 @@
-<h1>Product#new</h1>
-<p>Find me in app/views/product/new.html.erb</p>
+<div class="text-center">
+<p>New <strong>Product</strong></p>
+</div>
+
+<%= form_for @product do |f| %>
+
+<%= f.label :Name %>
+<%= f.text_field :name, placeholder: "Type a name" %>
+<br>
+<%= f.label :Quantity %>
+<%= f.number_field :quantity, placeholder: "Type a Quantity" %>
+<br>
+<%= f.label :Price %>
+<%= f.number_field :price, placeholder: "Type a Price" %>
+<br>
+<%= f.label :Description %>
+<%= f.text_field :description, placeholder: "Type a Description" %>
+<br>
+<%= f.label :Image %>
+<%= f.file_field :image %>
+<br>
+<%= f.submit 'Create Product' %>
+<% end %>

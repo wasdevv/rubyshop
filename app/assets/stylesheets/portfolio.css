@@ -6,6 +6,7 @@
     outline: none;
     border: none;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 a {
@@ -75,7 +76,7 @@ a {
     padding: 80px 32px;
 }
 
-header {
+.header {
     position: relative;
     padding-top: 32px;
     display: grid;
@@ -84,14 +85,14 @@ header {
     gap: 32px;
 }
 
-header .content-portfolio h4 {
+.header .content-portfolio h4 {
     margin-bottom: 16px;
     color: #ccc;
     font-size: 16px;
     font-weight: 600;
 }
 
-header .content-portfolio h1 {
+.header .content-portfolio h1 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 48px;
@@ -99,16 +100,16 @@ header .content-portfolio h1 {
     line-height: 60px;
 }
 
-header .content-portfolio p {
+.header .content-portfolio p {
     margin-bottom: 2rem;
     color: #ccc;
 }
 
-header .image-portfolio {
+.header .image-portfolio {
     position: relative;
 }
 
-header .image-portfolio img {
+.header .image-portfolio img {
     max-width: 600px;
     margin: auto;
 }

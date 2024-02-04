@@ -1,12 +1,9 @@
-<div class="nav-ecommerce" id="navbar">
+<header class="nav-ecommerce">
   <a href="#" class="logo"><img src="https://i.imgur.com/e75G7zQ.png"></a>
 
   <ul class="navbar-things">
     <li><a href="<%= root_path %>" class="active">Home</a></li>
     <li><a href="#">Shop</a></li>
-    <% if user_signed_in? && current_user.admin? %>
-      <li><a href="<%= activity_logs_path %>" class="active">Admin Log</a></li>
-    <% end %>
     <% if user_signed_in? %>
       <li><a href="#">Create Product</a></li>
     <% end %>
@@ -21,4 +18,4 @@
       <a href=" <%= new_user_session_path %>"><i class="bi bi-cart"></i></a>
     <% end %>
   </div>
-</div>
+</header>

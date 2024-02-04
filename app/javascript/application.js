@@ -8,4 +8,4 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
         navbar.classList.toggle("sticky", window.scrollY > 0);
     });
-});
+});import "./channels"
