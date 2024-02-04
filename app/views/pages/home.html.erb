@@ -1,2 +1,58 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="cor-portfolio">
+  <nav>
+    <div class="nav-logo">
+      <a href="#">
+        <img src="">
+      </a>
+    </div>
+  
+    <ul class="nav-links">
+      <li class="link"><a href="<%= root_path %>">Home</a></li>
+      <li class="link"><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+  <br>
+  <header class="container">
+    <div class="content">
+      <h4>Are you looking for a Ruby On Rails developer?</h4>
+      <h1>Hi, im <span>Washington</span>, ROR Developer</h1>
+      <p>
+      I'm a Ruby on Rails 7 programmer
+      </p>
+      <br>
+      <button class="btn-portfolio" id="scrollButton">Get Started</button>
+    </div>
+    <div class="image">
+      <img src="https://i.imgur.com/MPcxF5A.png">
+    </div>
+    <section id="projects">
+    <h2 class="header">My Projects</h2>
+      <div class="learn">
+        <div class="card-portfolio">
+          <span><box-icon name='github' type='logo' ></box-icon> </span>
+          <h4>My GitHub</h4>
+          <p>
+            You can access my github to learn about my projects, including this one, made in Ruby on Rails 7.1.
+          </p>
+          <a href="https://github.com/wasdevv">Acess my GitHub</a>
+        </div>
+        <div class="card-portfolio">
+          <span><box-icon name='linkedin' type='logo' ></box-icon> </span>
+          <h4>My Linkedin</h4>
+          <p>
+            You can access my github to learn about my projects, including this one, made in Ruby on Rails 7.1.
+          </p>
+          <a href="https://www.linkedin.com/in/washington-cardoso-6a3558261/">Acess my Linkedin</a>
+        </div>
+        <div class="card-portfolio">
+          <span><box-icon name='store'></box-icon> </span>
+          <h4>My E-commerce</h4>
+          <p>
+            You can access my ecommerce repository, this project is a Ruby on Rails 7.1 Modern e-commerce.
+          </p>
+          <a href="https://github.com/wasdevv/ecommerce_rails">Acess my E-commerce</a>
+        </div>
+      </div>
+    </section>
+  </header>
+</div>
