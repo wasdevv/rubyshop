@@ -1,22 +1,24 @@
-<nav class="ecommerce-nav">
-    <a href="#" class="logo"><img src="https://i.imgur.com/e75G7zQ.png"></a>
+<div class="nav-ecommerce" id="navbar">
+  <a href="#" class="logo"><img src="https://i.imgur.com/e75G7zQ.png"></a>
 
-    <ul class="navbar-ecommerce">
-        <li><a href="<%= root_path %>" class="active">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <% if user_signed_in? && current_user.admin? %>
-          <li><a href="<%= activity_logs_path %>" class="active">Admin Log</a></li>
-        <% end %>
-        <% if user_signed_in? %>
-        <li><a href="#">Create Product</a></li>
-        <% end %>
-    </ul>
+  <ul class="navbar-things">
+    <li><a href="<%= root_path %>" class="active">Home</a></li>
+    <li><a href="#">Shop</a></li>
+    <% if user_signed_in? && current_user.admin? %>
+      <li><a href="<%= activity_logs_path %>" class="active">Admin Log</a></li>
+    <% end %>
+    <% if user_signed_in? %>
+      <li><a href="#">Create Product</a></li>
+    <% end %>
+  </ul>
 
-    <div class="icons-ecommerce">
-        <a href="#"><i class="bi bi-person"></i></a>
-        <a href="#"><i class="bi bi-cart"></i></a>
-        <a href="#"><i class="bi bi-person"></i></a>
-        <a href="#"><i class="bi bi-cart"></i></a>
-      <div class="bi bi-list" id="menu-icon"></div>
-    </div>
-</nav>
+  <div class="icons-ecommerce">
+    <% if user_signed_in? && current_user.cart.present? %>
+      <a href=" <%= user_home_path(current_user) %>"><i class="bi bi-person"></i></a>
+      <a href="<%= cart_path(current_user.cart) %>"><i class="bi bi-cart"></i></a>
+    <% else %>
+      <a href=" <%= new_user_session_path %>"><i class="bi bi-person"></i></a>
+      <a href=" <%= new_user_session_path %>"><i class="bi bi-cart"></i></a>
+    <% end %>
+  </div>
+</div>

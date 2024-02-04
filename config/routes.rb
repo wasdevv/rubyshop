@@ -8,11 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :pages do
-    member do
-      get '/index', to: 'pages#index', as: :index
-    end
-  end
+  get '/index', to: 'pages#index', as: :index
   # Defines the root path route ("/")
   root "pages#home"
 end

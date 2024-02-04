@@ -8,11 +8,6 @@
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
-    display: flex;
-}
-
 a {
     text-decoration: none;
 }
@@ -109,16 +104,16 @@ header .content-portfolio p {
     color: #ccc;
 }
 
-header .image {
+header .image-portfolio {
     position: relative;
 }
 
-header .image img {
+header .image-portfolio img {
     max-width: 600px;
     margin: auto;
 }
 
-section .header {
+.section-portfolio .header {
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
