@@ -1,0 +1,29 @@
+<br>
+<br>
+<br>
+<div class="text-center">
+  <h2>Ecommerce feito em <strong>Ruby on Rails 7.1</strong></h2>
+</div>
+<br>
+<div class="card custom-margin-left" style="width: 28rem;">
+  <div class="card-body">
+    <h5 class="card-title">Shop Ruby, o ecommerce em Rails 7.1!</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Ecommerce Shop Ruby</h6>
+    <p class="card-text">Conheça Shop Ruby, Meu maior projeto de ecommerce de portfólio!</p>
+    <a href="https://github.com/wasdevv/ecommerce_rails" class="card-link">Repositório</a>
+    <a href="https://www.linkedin.com/in/washington-cardoso-6a3558261/" class="card-link">Linkedin</a>
+  </div>
+</div>
+
+<div class="product-container">
+ <% @products.each do |product| %>
+    <div class="product product-left" id="product-<%= product.id %>" onclick="window.location.href='<%= product_path(product) %>';">
+      <p class="product-name fs-5"><strong><%= product.name %> </strong></p>
+      <p class="product-info"><strong>Price: <%= number_to_currency(product.price, unit: 'R$', separator: ',', delimiter: '.') %> </strong></p>
+      <p class="product-description"><strong>Description: <%= product.description %> </strong></p>
+    </div>
+ <% end %>
+</div>
+<div class="politics">
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Politicas de Privacidades
+</div>
